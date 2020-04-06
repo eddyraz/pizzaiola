@@ -1,0 +1,128 @@
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import MaterialTable from "material-table";
+
+
+import AxiosFetching from './vrlDataFetching' ;
+//import AxiosSearching from './vrlAxiosDataFetch';
+
+class ResultsTable extends Component {
+    render() {
+      return (
+        <div className="col-md-12 col-sm-12 col-xs-12">
+
+
+        <div className="api-results">
+          <AxiosFetching></AxiosFetching>
+        </div>
+
+
+{/*
+
+        <div className="api-results">
+          <AxiosSearching></AxiosSearching>
+        </div>
+*/}
+
+
+
+
+        <div className="results-table">
+        <MaterialTable
+          title="Resultados Locales"
+          columns={[
+            {
+              title: 'Signatura', field: 'signatura',
+              cellStyle: {
+              //  backgroundColor: 'white',
+                color: '#714B23'
+              },
+              headerStyle: {
+                backgroundColor: '#e9fac8',
+              }
+            },
+            { title: 'Tipo de recurso', field: 'tipo_recurso' },
+            { title: 'Título', field: 'titulo' },
+            { title: 'Autor', field: 'autor', type: 'numeric' },
+            { title: 'Autor2', field: 'autor2' },
+            { title: 'Resumen', field: 'resumen' },
+            { title: 'ISBN', field: 'isbn' },
+            { title: 'Editorial', field: 'editorial' },
+            { title: 'Localización', field: 'localizacion' },
+
+
+          ]}
+
+
+          data={[
+            { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
+            { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
+          ]}
+          options={{
+            headerStyle: {
+              backgroundColor: '#C5E1A5',
+              color: '#714B23'
+            }
+          }}
+        />
+
+        </div>
+
+        <br/>
+        <br/>
+        <div className="results-table">
+        <MaterialTable
+          title="Resultados en otras Bibliotecas"
+          columns={[
+            {
+              title: 'Biblioteca', field: 'propietario_recurso',
+              cellStyle: {
+              //  backgroundColor: '#E9FAC8',
+                color: '#714B23'
+              },
+              headerStyle: {
+                backgroundColor: '#E9FAC8',
+              }
+            },
+            { title: 'Signatura', field: 'signatura' },
+            { title: 'Tipo de recurso', field: 'tipo_recurso' },
+            { title: 'Título', field: 'titulo' },
+            { title: 'Autor', field: 'autor', type: 'numeric' },
+            { title: 'Autor2', field: 'autor2' },
+            { title: 'Resumen', field: 'resumen' },
+            { title: 'ISBN', field: 'isbn' },
+           // { title: 'Editorial', field: 'editorial' },
+            
+
+
+          ]}
+
+
+          data={[
+            { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
+            { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
+          ]}
+          options={{
+            headerStyle: {
+              backgroundColor: '#C5E1A5',
+              color: '#714B23'
+            }
+          }}
+        />
+
+        </div>
+
+
+
+
+        </div>
+        
+        
+
+      )
+    }
+  }
+
+
+
+export default ResultsTable ;

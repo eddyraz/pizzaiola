@@ -1,0 +1,14 @@
+import React, { Component } from 'react' ;
+import SearchBar from './vrlSearchBar' ;
+import ResultsTable from './vrlSearchResults' ;
+
+export default class dataDisplay extends Component {
+  render() {
+    return (
+         <section>
+         <SearchBar></SearchBar>
+         <ResultsTable></ResultsTable>
+         </section> 
+    )
+  }
+}

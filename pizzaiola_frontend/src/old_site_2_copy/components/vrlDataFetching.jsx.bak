@@ -1,0 +1,37 @@
+import React, { Component } from 'react' ;
+import axios from 'axios' ;
+
+const ELASTIC_INDEX = ['_all','opac_libros','opac_articulos_revistas','opac_tesis'] ;
+const SEARCH_TERM = 'amelia' ; 
+const API_URL = 'http://biblioteca.ccpadrevarela.org:19200/'+  ELASTIC_INDEX[0] + '/_search?q=' + SEARCH_TERM ;
+
+
+export default class AxiosFetching extends Component{
+
+state = {
+    recursos: []
+  };
+  componentDidMount() {
+    //const url = `${API_URL}/users/`;
+    const url = `${API_URL}` ;
+    axios.get(url).then(response => response.data)
+    .then((data) => {
+      this.setState({ recursos: data['hits']['hits'] })
+      
+      console.log(this.state.recursos) ;
+      
+     })
+  }
+
+  render() {
+    return (
+      <div className="tableData">
+        <ul>
+     {this.state.recursos.map(biblio_res => <div key="datos_libro"><li>{biblio_res._source['título']}</li></div>)} 
+        </ul>
+   dummy text for output
+      </div>
+    ) 
+}
+
+}
