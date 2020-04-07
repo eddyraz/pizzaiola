@@ -1,9 +1,7 @@
 from django.contrib import admin
-from fridge.models import Stock
-from fridge.models import StockCategory 
-from fridge.models import MeasureUnit
-from fridge.models import FridgeEnvirontment
-from fridge.models import Supplier
+
+from fridge.models import (FridgeEnvirontment, MeasureUnit, Stock,
+                           StockCategory, Supplier)
 
 # Register your models here.
 
