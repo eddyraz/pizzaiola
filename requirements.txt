@@ -11,7 +11,7 @@ decorator==4.0.6
 defer==1.0.6
 dirspec==13.10
 Django==2.2.11
-httplib2==0.9.1
+httplib2==0.19.0
 idna==2.0
 ipython==2.4.1
 kazam==1.4.5
