@@ -10,7 +10,7 @@ cryptography==1.2.3
 decorator==4.0.6
 defer==1.0.6
 dirspec==13.10
-Django==2.2.11
+Django==2.2.21
 httplib2==0.9.1
 idna==2.0
 ipython==2.4.1
