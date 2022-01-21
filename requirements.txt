@@ -13,7 +13,7 @@ dirspec==13.10
 Django==2.2.11
 httplib2==0.9.1
 idna==2.0
-ipython==2.4.1
+ipython==7.16.3
 kazam==1.4.5
 louis==2.6.4
 lxml==3.5.0
